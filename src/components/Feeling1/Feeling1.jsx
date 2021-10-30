@@ -11,7 +11,7 @@ function Feeling1() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (feeling > 0 && feeling <= 5) {
-            dispatch({ type: 'FEELING', payload: feeling });
+            dispatch({ type: 'FEELING1', payload: feeling });
             history.push('/understanding2');
         } else {
             alert('Please enter a number 1 - 5');
