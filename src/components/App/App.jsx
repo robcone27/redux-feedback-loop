@@ -5,8 +5,8 @@ import './App.css';
 
 import Feeling1 from '../Feeling1/Feeling1';
 import Understanding2 from '../Understanding2/Understanding2';
-// import Supported3 from '../Supported3/Supported3';
-// import Comments4 from '..Comments4/Comments4';
+import Supported3 from '../Supported3/Supported3';
+import Comments4 from '..Comments4/Comments4';
 // import Review5 from '..Review5/Review5';
 // import Success6 from '../Success6/Success6';
 
@@ -31,7 +31,7 @@ function App() {
     </Route>
 
     <Route path="/supported3" exact>
-      <Understanding2 />
+      <Supported3 />
     </Route>
     
     </Router>

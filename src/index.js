@@ -31,8 +31,8 @@ const understanding = (state = '', action) => {
     return state;
 }
 
-const understanding = (state = '', action) => {
-    if (action.type === 'Supported3') {
+const supported = (state = '', action) => {
+    if (action.type === 'SUPPORTED3') {
         return action.payload;
     };
     return state;
@@ -43,7 +43,8 @@ const storeInstance = createStore(
         {
             id,
             feeling,
-            understanding
+            understanding,
+            supported
 
 
 
