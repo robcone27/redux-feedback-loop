@@ -12,12 +12,11 @@ import { Provider } from 'react-redux'
 // registerServiceWorker();
 
 //REDUCERS
-
 const id = (state = 0, action) => {
     state += 1;
-    return state;
-  };
-  
+ return state;
+};
+
 const feeling = (state = '', action) => {
     if (action.type === 'FEELING1') {
         return action.payload;
@@ -25,25 +24,38 @@ const feeling = (state = '', action) => {
     return state;
 }
 
+const understanding = (state = '', action) => {
+    if (action.type === 'UNDERSTANDING2') {
+        return action.payload;
+    };
+    return state;
+}
+
+const understanding = (state = '', action) => {
+    if (action.type === 'Supported3') {
+        return action.payload;
+    };
+    return state;
+}
 //STORE
 const storeInstance = createStore(
     combineReducers(
-      {
-        id,
-        feeling
-       
-      
-       
-      }
+        {
+            id,
+            feeling,
+            understanding
+
+
+
+        }
     ),
     applyMiddleware(
-      logger
+        logger
     )
-  );
+);
 ReactDOM.render(
     <Provider store={storeInstance}>
-      <App />
+        <App />
     </Provider>,
     document.getElementById("root")
-  );
-  
+);

@@ -21,6 +21,7 @@ return (
 <div>
     <h2>How are you feeling today?</h2>
     <form onSubmit={handleSubmit}>
+       
         <input
         type="text"
         value={feeling}
