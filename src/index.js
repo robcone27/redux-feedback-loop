@@ -14,7 +14,7 @@ import { Provider } from 'react-redux'
 //REDUCERS
 const id = (state = 0, action) => {
     state += 1;
- return state;
+    return state;
 };
 
 const feeling = (state = '', action) => {
@@ -37,6 +37,13 @@ const supported = (state = '', action) => {
     };
     return state;
 }
+
+const comments = (state = '', action) => {
+    if (action.type === 'COMMENTS4') {
+        return action.payload;
+    };
+    return state;
+}
 //STORE
 const storeInstance = createStore(
     combineReducers(
@@ -44,10 +51,8 @@ const storeInstance = createStore(
             id,
             feeling,
             understanding,
-            supported
-
-
-
+            supported,
+            comments
         }
     ),
     applyMiddleware(
