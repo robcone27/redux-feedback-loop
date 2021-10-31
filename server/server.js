@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 const router = express.Router();
+const pool = require( './modules/pool.js');
 
 /** ---------- MIDDLEWARE ---------- **/
 app.use(bodyParser.json());
@@ -19,7 +20,7 @@ app.post('/save', (req, res) => {
     let data = req.body;
     let sqlParams = [data.feeling, data.understanding, data.support, data.comments];
 
-    router.query(sqlQuery, sqlParams)
+    pool.query(sqlQuery, sqlParams)
         .then(() => {
             res.sendStatus(201);
         })

@@ -1,41 +1,51 @@
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 
-function Review5(){
-const feeling = useSelector(store => store.feeling);
+function Review5() {
+    const feeling = useSelector(store => store.feeling);
+    const understanding = useSelector(store => store.understanding);
+    const support = useSelector(store => store.support);
+    const comments = useSelector(store => store.comments);
 
 
 
-const history = useHistory();
+    const history = useHistory();
 
-const handleClick = () =>{
-    axios({
-     method: 'POST',
-     url: '/save',
-     data:{
-     feeling: feeling,
-    //  understanding: understanding,
-    //  support: support,
-    //  comments: comments,
-     }   
-    })
-    .then(response => {
-        console.log('handleClick response', response);
-    })
-    .catch(error => {
-        console.log('handleClick error', error);
-    });
+    const handleClick = () => {
+       
+        axios({
+            method: 'POST',
+            url: '/save',
+            data: {
+                feeling: feeling,
+                understanding: understanding,
+                support: support,
+                comments: comments
+            }
+        })
+            .then(response => {
+                console.log('handleClick response', response);
+            })
+            .catch(error => {
+                console.log('handleClick error', error);
+            });
 
-  history.push('/success6');
-}
-  return(
-      <div>
-          <h2>Review your feed back</h2>
-          <h3>Feeling: {feeling} </h3>
-          <button onCLick={handleClick}>Submit</button>
-      </div>
-  );
+        history.push('/success6');
+       
+    }
+    console.log({support})
+    return (
+        <div>
+            <h2>Review your feed back</h2>
+            <h3>Feeling: {feeling} </h3>
+            <h3>Understanding: {understanding} </h3>
+            <h3>Support: {support} </h3>
+            <h3>Comments: {comments} </h3>
+
+            <button onClick={handleClick}>Submit</button>
+        </div>
+    );
 };
 
-export default Review5; 
+export default Review5;

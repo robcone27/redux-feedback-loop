@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import { applyMiddleware, createStore, combineReducers } from 'redux'
 import logger from 'redux-logger';
 import { Provider } from 'react-redux'
@@ -31,7 +31,7 @@ const understanding = (state = '', action) => {
     return state;
 }
 
-const supported = (state = '', action) => {
+const support = (state = '', action) => {
     if (action.type === 'SUPPORTED3') {
         return action.payload;
     };
@@ -45,12 +45,7 @@ const comments = (state = '', action) => {
     return state;
 }
 
-const review = (state = '', action) => {
-    if (action.type === 'REVIEW5') {
-        return action.payload;
-    };
-    return state;
-}
+
 //STORE
 const storeInstance = createStore(
     combineReducers(
@@ -58,7 +53,7 @@ const storeInstance = createStore(
             id,
             feeling,
             understanding,
-            supported,
+            support,
             comments
         }
     ),

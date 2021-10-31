@@ -16,6 +16,7 @@ function Supported3() {
         } else {
             alert('Please enter a number 1 - 5');
         }
+        console.log("clicked")
     };
     return (
         <div>
