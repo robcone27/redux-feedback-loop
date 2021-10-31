@@ -22,8 +22,6 @@ List other prerequisites here
 
 
 ## Usage
-How does someone use this application? Tell a user story here.
-
 1. Connect to localhost:3000 to view the pre-loaded feedback questions
 2. Fill out form.
 3. Form will be uploaded and questions will be saved to DB.
