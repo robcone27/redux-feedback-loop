@@ -8,7 +8,7 @@ import Understanding2 from '../Understanding2/Understanding2';
 import Supported3 from '../Supported3/Supported3';
 import Comments4 from '../Comments4/Comments4';
 import Review5 from '../Review5/Review5';
-// import Success6 from '../Success6/Success6';
+import Success6 from '../Success6/Success6';
 
 
 
@@ -42,6 +42,11 @@ function App() {
       <Review5 />
     </Route>
 
+    <Route path="/success6" exact>
+      <Success6 />
+    </Route>
+
+    
     </Router>
     </div>
   );
