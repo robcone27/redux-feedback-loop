@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import Button from '@mui/material/Button';
 
 function Comments4() {
 
@@ -26,7 +27,7 @@ function Comments4() {
                     value={comments}
                     onChange={event => setComments(event.target.value)}
                 />
-                <button type="submit">NEXT</button>
+                <Button sx={{height: '22px'}}variant="contained" size="small" type="submit">Next</Button>
             </form>
         </div>
     );
