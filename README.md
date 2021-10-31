@@ -16,9 +16,9 @@ List other prerequisites here
 1. npm install to get the required dependencies.
 2. Create a new sql database named "prime_feedback"
 3. Run the CREATE TABLE and INSERT INTO feedback from 'database.sql' to initialize the gallery table
-4.Run npm run server in your terminal
-5.Run npm run client in your terminal
-6.The npm run client command will open up a new browser tab for you!
+4. Run npm run server in your terminal
+5. Run npm run client in your terminal
+6. The npm run client command will open up a new browser tab for you!
 
 
 ## Usage
