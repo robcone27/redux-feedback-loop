@@ -44,6 +44,13 @@ const comments = (state = '', action) => {
     };
     return state;
 }
+
+const review = (state = '', action) => {
+    if (action.type === 'REVIEW5') {
+        return action.payload;
+    };
+    return state;
+}
 //STORE
 const storeInstance = createStore(
     combineReducers(
