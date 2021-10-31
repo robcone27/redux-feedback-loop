@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 
+
+
 function Review5() {
     const feeling = useSelector(store => store.feeling);
     const understanding = useSelector(store => store.understanding);
@@ -44,7 +46,6 @@ function Review5() {
             <h3>Support: {support} </h3>
             <h3>Comments: {comments} </h3>
 
-            <button onClick={handleClick}>Submit</button>
             
             <Button onClick={handleClick} 
             sx={{height: '22px'}}
