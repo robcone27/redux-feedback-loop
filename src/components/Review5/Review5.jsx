@@ -16,7 +16,7 @@ function Review5() {
     const history = useHistory();
 
     const handleClick = () => {
-       
+
         axios({
             method: 'POST',
             url: '/save',
@@ -35,9 +35,9 @@ function Review5() {
             });
 
         history.push('/success6');
-       
+
     }
-    console.log({support})
+    console.log({ support })
     return (
         <div>
             <h2>Review your feed back</h2>
@@ -46,13 +46,13 @@ function Review5() {
             <h3>Support: {support} </h3>
             <h3>Comments: {comments} </h3>
 
-            
-            <Button onClick={handleClick} 
-            sx={{height: '22px'}}
-            variant="contained" 
-            size="small" 
-            type="submit">Next</Button>
-            
+
+            <Button onClick={handleClick}
+                sx={{ height: '22px' }}
+                variant="contained"
+                size="small"
+                type="submit">Next</Button>
+
         </div>
     );
 };

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; //this is what heroku needs 
 const router = express.Router();
 const pool = require( './modules/pool.js');
 

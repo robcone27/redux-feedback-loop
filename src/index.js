@@ -8,8 +8,7 @@ import logger from 'redux-logger';
 import { Provider } from 'react-redux'
 
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+
 
 //REDUCERS
 const id = (state = 0, action) => {

@@ -22,13 +22,13 @@ function Understanding2() {
         <div>
             <h2>How well are you understanding the content?</h2>
             <form onSubmit={handleSubmit}>
-             
+
                 <input
                     type="text"
                     value={understanding}
                     onChange={event => setUnderstanding(event.target.value)}
                 />
-                <Button sx={{height: '22px'}}variant="contained" size="small" type="submit">Next</Button>
+                <Button sx={{ height: '22px' }} variant="contained" size="small" type="submit">Next</Button>
             </form>
         </div>
     );
