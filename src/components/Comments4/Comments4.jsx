@@ -27,7 +27,7 @@ function Comments4() {
                     value={comments}
                     onChange={event => setComments(event.target.value)}
                 />
-                <Button sx={{height: '22px'}}variant="contained" size="small" type="submit">Next</Button>
+                <Button sx={{height: '22px'}}variant="contained" size="small" type="submit">Continue</Button>
             </form>
         </div>
     );
